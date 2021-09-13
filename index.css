@@ -273,7 +273,7 @@ input {
 }
 
 /* section-1 */
-/* 슬라이드 부분, 퀵메뉴 */
+/* 슬라이드 부분 */
 
 .main-carousel-container {
   border: 3px solid thistle;
@@ -296,6 +296,8 @@ input {
   width: 100%;
 }
 
+/* 퀵메뉴 */
+
 .quick-menu {
   display: flex;
   justify-content: space-evenly;
@@ -304,6 +306,10 @@ input {
 
 .quick-menu-item {
   padding: 20px 0;
+}
+
+.quick-menu-item:hover {
+  color: #0e2ac9;
 }
 
 .quick-menu-item a {
