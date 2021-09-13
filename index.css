@@ -478,6 +478,11 @@ input {
   background-color: #ffffff;
   color: #222222;
 }
+.search-box-item:hover.search-box-item::after {
+  content: url(/image/search/icon_arrow_blue.png);
+  width: 100%;
+  padding-right: 16px;
+}
 
 .search-box-item a {
   display: inline-block;
