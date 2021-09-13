@@ -28,18 +28,15 @@ input {
 
 .wrapper {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1500px;
   padding: 0 30px;
 }
 
-.slide-wrapper {
+.media-wrapper,
+.footer-wrapper {
   margin: 0 auto;
-  max-width: 1500px;
-}
-
-.search-wrapper {
-  margin: 0 auto;
-  max-width: 1500px;
+  max-width: 1200px;
+  padding: 0 30px;
 }
 
 :root {
@@ -56,6 +53,10 @@ input {
 
 .header-lang-container {
   vertical-align: middle;
+}
+
+.sub-menu-item a {
+  font-size: 1.5rem;
 }
 
 .quick-menu-item {
@@ -123,10 +124,10 @@ input {
 }
 
 /* 메뉴 아이콘 */
-.btn-right-menu {
+/* .btn-right-menu {
   width: 34px;
   vertical-align: middle;
-}
+} */
 
 /* 퀵메뉴 아이콘 */
 .quick-menu img {
@@ -181,7 +182,6 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* border: 3px solid pink; */
   height: 88px;
 }
 
@@ -192,7 +192,7 @@ input {
 
 .header-menu-item {
   /* border: 3px solid sandybrown; */
-  width: 130px;
+  width: 150px;
 }
 
 .header-menu-item a {
@@ -210,7 +210,66 @@ input {
 .header-lang-item {
   border-right: 1px solid rgba(0, 0, 0, 0.1);
   padding-right: 14px;
-  margin-right: 14px;
+  margin-right: 8px;
+}
+
+.header-menu-item {
+  /* border: 3px solid salmon; */
+  position: relative;
+}
+
+.header-sub-menu {
+  /* border: 3px solid palegreen; */
+  position: absolute;
+  top: 100%;
+  display: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.sub-menu-item {
+  text-align: center;
+  /* border: 1px solid rgba(0, 0, 0, 0.1); */
+  display: inline-block;
+  width: 100%;
+}
+
+.header-menu-container:hover .header-sub-menu {
+  display: block;
+  z-index: 2;
+  background-color: #fff;
+}
+
+.header-container {
+  position: relative;
+}
+
+/* .header-menu-container::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: 370px;
+  background-color: palevioletred;
+  z-index: 1;
+} */
+
+.sub-menu-item a {
+  padding: 20px 10px;
+}
+
+.sub-menu-item:hover {
+  color: #1634db;
+  border-bottom: 1px solid #1634db;
+}
+
+.header-sub-menu.on {
+  border-top: 2px solid #1634db;
+}
+
+.sub-menu-item.on {
+  background-color: #eeeeee;
+  /* border:3px solid salmon; */
 }
 
 /* section-1 */
