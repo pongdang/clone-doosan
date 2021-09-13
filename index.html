@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/index.css">
     <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.14.0/babel.min.js"></script>
 </head>
 
 <body class="main">
@@ -143,31 +144,31 @@
                     <img src="/image/slide/slide-img-3.jpeg"
                         alt="사회적 책임 다하는 두산, 두산은 CSR은 '또 다른 100년 성장'을 위한 발판이며 사회와의 약속입니다.">
                 </div>
-                <button class="carousel-btn carousel-btn-first">1</button>
-                <button class="carousel-btn carousel-btn-second">2</button>
-                <button class="carousel-btn carousel-btn-third">3</button>
+                <button class="carousel-btn carousel-btn-first" data-index="1">1</button>
+                <button class="carousel-btn carousel-btn-second" data-index="2">2</button>
+                <button class="carousel-btn carousel-btn-third" data-index="3">3</button>
             </div>
 
             <nav class="wrapper">
                 <ul class="quick-menu">
                     <li data-menu="quick-subsidiary" id="quick-subsidiary" class="quick-menu-item">
                         <a href="#">
-                            <img src="/image/quick-menu/subsidiary-off.png" alt="계열사">계열사
+                            <img src="/image/quick-menu/quick-subsidiary.png" alt="계열사">계열사
                         </a>
                     </li>
                     <li data-menu="quick-story" id="quick-story" class="quick-menu-item">
                         <a href="#">
-                            <img src="/image/quick-menu/story-off.png" alt="두산스토리">두산스토리
+                            <img src="/image/quick-menu/quick-story.png" alt="두산스토리">두산스토리
                         </a>
                     </li>
                     <li data-menu="quick-news" id="quick-news" class="quick-menu-item">
                         <a href="#">
-                            <img src="/image/quick-menu/paper-off.png" alt="두산뉴스룸">두산뉴스룸
+                            <img src="/image/quick-menu/quick-news.png" alt="두산뉴스룸">두산뉴스룸
                         </a>
                     </li>
                     <li data-menu="quick-location" id="quick-location" class="quick-menu-item">
                         <a href="#">
-                            <img src="/image/quick-menu/map-off.png" alt="사업장위치">사업장위치
+                            <img src="/image/quick-menu/quick-location.png" alt="사업장위치">사업장위치
                         </a>
                     </li>
                 </ul>
@@ -353,7 +354,7 @@
             </nav>
         </div>
     </footer>
-    <script src="/index.js"></script>
+    <script type="text/babel" src="/index.js"></script>
 </body>
 
 </html>
