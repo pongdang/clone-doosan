@@ -23,7 +23,6 @@ for (let i = 0; i < quickMenuList.length; i++) {
 // 이게,, 자동 슬라이드?!
 const ACTIVE_CLASS = "active";
 const firstCarousel = document.querySelector(".carousel-item:first-child");
-firstCarousel.classList.add(ACTIVE_CLASS);
 function carousel() {
   const currentCarousel = document.querySelector(`.${ACTIVE_CLASS}`);
   if (currentCarousel) {
