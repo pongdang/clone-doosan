@@ -281,19 +281,27 @@ input {
   position: relative;
 }
 
-.carousel-box {
+.carousel-item {
   position: absolute;
   top: 0;
   height: 100%;
   width: 100%;
   transform: translate(-50%, 0);
   left: 50%;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.7s ease-in-out;
 }
 
-.carousel-box img {
+.carousel-item img {
   object-fit: cover;
   height: 100%;
   width: 100%;
+}
+
+.active {
+  z-index: 1;
+  opacity: 1;
 }
 
 /* 퀵메뉴 */
@@ -323,6 +331,7 @@ input {
   width: 100px;
   height: 10px;
   cursor: pointer;
+  z-index: 3;
 }
 
 .carousel-btn:hover {
@@ -342,16 +351,6 @@ input {
 .carousel-btn-third {
   bottom: 50px;
   left: 260px;
-}
-
-/* carousel */
-
-.carousel-box {
-  opacity: 0;
-}
-
-.active {
-  opacity: 1;
 }
 
 /* section-2*/
@@ -463,13 +462,14 @@ input {
   border: none;
   margin-top: 44px;
   padding: 21px 72px 20px 24px;
+  /* display: inline-block; */
 }
 
-.search-bar::after {
-  content: "|";
+/* .search-bar::before {
+  content: url(/image/btn_search_arrow_black.png);
   width: 100%;
   display: inline-block;
-}
+} */
 
 .search-box-container {
   display: flex;
@@ -490,6 +490,7 @@ input {
   background-color: #ffffff;
   color: #222222;
 }
+
 .search-box-item:hover.search-box-item::after {
   content: url(/image/search/icon_arrow_blue.png);
   width: 100%;
