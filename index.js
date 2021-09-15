@@ -20,32 +20,27 @@ for (let i = 0; i < quickMenuList.length; i++) {
 // function () {}
 // () => {}
 
-// 이게,, 자동 슬라이드?!
-const ACTIVE_CLASS = "active";
-const firstCarousel = document.querySelector(".carousel-item:first-child");
-function carousel() {
-  const currentCarousel = document.querySelector(`.${ACTIVE_CLASS}`);
-  if (currentCarousel) {
-    currentCarousel.classList.remove(ACTIVE_CLASS);
-    const nextCarousel = currentCarousel.nextElementSibling;
-    if (nextCarousel) {
-      nextCarousel.classList.add(ACTIVE_CLASS);
-    } else {
-      firstCarousel.classList.add(ACTIVE_CLASS);
-    }
-  } else {
-    firstCarousel.classList.add(ACTIVE_CLASS);
+let currentIndex = 0;
+function showSlide(index) {
+  let slides = document.querySelectorAll(".carousel-item");
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("active");
   }
+  slides[index].classList.add("active");
+  currentIndex = index + 1;
+}
+function carousel() {
+  showSlide(currentIndex % 3);
 }
 carousel();
-setInterval(carousel, 4000);
-
+let id = setInterval(carousel, 4000);
 // 이미지 버튼을 누르면 해당하는 이미지가 나타남
 const carouselBtn = document.querySelector(".main-carousel-container");
 carouselBtn.addEventListener("click", (event) => {
   if (event.target.nodeName === "BUTTON") {
-    const slideImg = document.querySelector("#carousel-box1 img");
-    slideImg.src = `/image/slide/slide-img-${event.target.dataset.index}.jpeg`;
-    // console.log(slideImg);
+    const index = Number(event.target.dataset.index) - 1;
+    showSlide(index);
+    clearInterval(id);
+    id = setInterval(carousel, 4000);
   }
 });
