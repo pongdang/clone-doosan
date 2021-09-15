@@ -38,7 +38,7 @@ function carousel() {
   }
 }
 carousel();
-setInterval(carousel, 3000);
+setInterval(carousel, 4000);
 
 // 이미지 버튼을 누르면 해당하는 이미지가 나타남
 const carouselBtn = document.querySelector(".main-carousel-container");
