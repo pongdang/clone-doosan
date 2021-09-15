@@ -219,10 +219,8 @@ input {
 }
 
 .header-sub-menu {
-  /* border: 3px solid palegreen; */
   position: absolute;
   top: 100%;
-  display: none;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -235,24 +233,13 @@ input {
 
 .header-menu-container:hover .header-sub-menu {
   display: block;
-  z-index: 2;
+  z-index: 10;
   background-color: #fff;
 }
 
 .header-container {
   position: relative;
 }
-
-/* .header-menu-container::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 100%;
-  width: 100%;
-  height: 370px;
-  background-color: palevioletred;
-  z-index: 1;
-} */
 
 .sub-menu-item a {
   padding: 20px 10px;
@@ -331,7 +318,7 @@ input {
   width: 100px;
   height: 10px;
   cursor: pointer;
-  z-index: 3;
+  z-index: 10;
 }
 
 .carousel-btn:hover {
